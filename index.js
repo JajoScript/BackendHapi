@@ -16,18 +16,26 @@ async function init(){
     server.route({
         method: 'GET',
         path: '/',
-        handler: (request, response) =>{
-            return "Hola mundo";
+        handler: (request, h) =>{
+            return h.response('Hello World').code(200);
+        }
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/redirect',
+        handler: (request, h) =>{
+            return h.redirect(`http://localhost:${process.env.PORT}/`);
         }
     });
 
     await server.start()
         .then(()=>{
-            console.log(`[SERVER] Ready on: ${server.info.uri}`)
+            console.log(`[SERVER] Ready on: ${server.info.uri}`);
         })
         .catch(error => {
             console.log(`[ERROR] ${error}`);
-            process.end(1)
+            process.end(1);
         });
 };
 

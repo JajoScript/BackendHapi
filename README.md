@@ -68,3 +68,23 @@ Define puntos de interacción para el aplicativo.
 * Method : Método HTTP por el cual un Navegador o un cliente debe acceder a la ruta.
 * Path : Define parte de la URL que será accedida por el cliente.
 * Handler : Función que se ejecuta cuando se accede a una ruta.
+
+### El objeto h, response y sus herramientas.
+Response
+
+**El objeto H:**
+
+Segundo argumento del handler, es una colección de utilidades y propiedades relativas a enviar información de respuesta.
+
+**Métodos básicos**
+* *h.response* : Crea un objeto de respuesta.
+* *h.redirect* : Redirecciona una petición.
+
+**El Objeto Response**
+
+Generado por el mpetodo **h.response**, permite definir las propiedades de larespuesta al **Navegador** o al **Cliente** que realizó la petición.
+
+**Métodos Basicos**
+* *response.header* : Configura un encabezado en la respuesta.
+* *response.type* : Permite definir el tipo mime de la respuesta.
+* *response.code* : Permite definir el código de estado de la respuesta. (200, 300, 400)
