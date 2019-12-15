@@ -91,3 +91,5 @@ Generado por el mpetodo **h.response**, permite definir las propiedades de lares
 
 ### Uso de plugins / Contenido estaticos.
 Plugin *inert* Permite servir archivos y agrega funcionalidad al objeto h.
+
+### Plantillas con Handlebars.
