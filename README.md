@@ -88,3 +88,5 @@ Generado por el mpetodo **h.response**, permite definir las propiedades de lares
 * *response.header* : Configura un encabezado en la respuesta.
 * *response.type* : Permite definir el tipo mime de la respuesta.
 * *response.code* : Permite definir el código de estado de la respuesta. (200, 300, 400)
+
+### Uso de plugins / Contenido estatico.
