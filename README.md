@@ -89,4 +89,5 @@ Generado por el mpetodo **h.response**, permite definir las propiedades de lares
 * *response.type* : Permite definir el tipo mime de la respuesta.
 * *response.code* : Permite definir el código de estado de la respuesta. (200, 300, 400)
 
-### Uso de plugins / Contenido estatico.
+### Uso de plugins / Contenido estaticos.
+Plugin *inert* Permite servir archivos y agrega funcionalidad al objeto h.
