@@ -93,3 +93,5 @@ Generado por el mpetodo **h.response**, permite definir las propiedades de lares
 Plugin *inert* Permite servir archivos y agrega funcionalidad al objeto h.
 
 ### Plantillas con Handlebars.
+
+Las plantillas son generalmente archivos html con marcadores particulares que permiten la inserción de variables y la ejecución de algunas instrucciones de programación, antes de ser renderizados. Esta interpretación previa la realiza un plugin conocido como motor de plantillas, como es el caso de Handlebars.
