@@ -9,25 +9,37 @@ const path = require('path');
 // Instanciación del servidor.
 const server = Hapi.server({
     port: process.env.PORT || 3000,
-    host: 'localhost'
+    host: 'localhost',
+    routes:{
+        files:{
+            relativeTo: path.join(__dirname, 'public')
+        }
+    }
 });
 
 // Aplicación.
 async function init(){
+    await server.register(inert);
+    
     // Creación de la ruta.
     server.route({
         method: 'GET',
-        path: '/',
+        path: '/home',
         handler: (request, h) =>{
-            return h.response('Hello World').code(200);
+            return h.file('index.html')
         }
     });
 
     server.route({
         method: 'GET',
-        path: '/redirect',
-        handler: (request, h) =>{
-            return h.redirect(`http://localhost:${process.env.PORT}/`);
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: '.',
+                index: [
+                    'index.html'
+                ]
+            }
         }
     });
 
