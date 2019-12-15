@@ -1,4 +1,4 @@
-# Curso de Node.js con Hapi
+# Backend con Hapi
 
 ### Framework de NodeJS
 **¿Qué es Hapi?**
